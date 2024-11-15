@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You Am... 😊!</title>
+  <link rel="stylesheet" href="Style3.css" />
+</head>
+<body>
+  <div class="envelope">
+    <div class="back"></div>
+    <div class="letter">
+      <div class="heart"></div>
+      <div class="text">
+       
+        <h3>
+          I want to say <br />
+          many thanks but, <br />
+          i can't express so i made <br />
+          this for you 😊<br>
+          <span style="font: bold; color: red;">And Happy Birthday 🎉</span>
+        </h3>
+        <!-- <a style="cursor: pointer; font-size: larger; z-index: 100;" href="/index.html">Click here</a> -->
+        <!-- <a href="">And Happy Birthy Day!</a> -->
+         <!-- <h3>And Happy Birthday 🎉</h3> -->
+      </div>
+    </div>
+    <div class="front"></div>
+    <div class="top"></div>
+    <div class="shadow"></div>
+    <div class="text1" >
+      <h2 >Touch Envelope 👇🏻</h2>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animationBox = document.querySelector('.animation-box');
+
+      animationBox.addEventListener('touchstart', () => {
+        // Remove and re-add classes to restart animations on touch
+        const elements = animationBox.querySelectorAll('.first-text, .second-text, .third-text, .fourth-text, .fifth-text');
+        elements.forEach(el => {
+          el.style.animation = 'none'; // Reset animation
+          void el.offsetWidth; // Trigger reflow
+          el.style.animation = ''; // Restart animation
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>
